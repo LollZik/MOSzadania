@@ -20,7 +20,7 @@ void AddName(char *buf, char ***wsk){
     }
 
     *wsk = (char **)realloc(*wsk,sizeof(char*)*(i+2));
-    //(*wsk)[i] = (char *)malloc(sizeof(char)*(strlen(buf)+1));
+    (*wsk)[i] = (char *)malloc(sizeof(char)*(strlen(buf)+1));
     (*wsk)[i]= strdup(buf);
     (*wsk)[i+1] = NULL;
 }
